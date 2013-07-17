@@ -1,9 +1,10 @@
 'use strict';
 
-swimmateApp.controller('MainCtrl', function ($scope) {
+angular.module('swimmateApp')
+	.controller('MainCtrl', function ($scope) {
 		$scope.awesomeThings = [
-			'HTML5 Boilerplate',
-			'AngularJS',
-			'Karma'
+			'Teams',
+			'Meets',
+			'Rosters'
 		];
 	});

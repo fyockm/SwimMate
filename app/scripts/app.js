@@ -1,7 +1,6 @@
 'use strict';
 
-var swimmateApp = angular.module('swimmateApp', ['firebase']);
-swimmateApp
+angular.module('swimmateApp', ['firebase'])
 	.value('fbURL','https://swimmate.firebaseio.com/')
 	.config(function ($routeProvider) {
 		$routeProvider
@@ -20,6 +19,10 @@ swimmateApp
 			.when('/meets', {
 				templateUrl: 'views/meets.html',
 				controller: 'MeetsCtrl'
+			})
+			.when('/roster', {
+			  templateUrl: 'views/roster.html',
+			  controller: 'RosterCtrl'
 			})
 			.otherwise({
 				redirectTo: '/'

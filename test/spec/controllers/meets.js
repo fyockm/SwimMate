@@ -1,22 +1,22 @@
 'use strict';
 
-describe('Controller: TeamsCtrl', function () {
+describe('Controller: MeetsCtrl', function () {
 
   // load the controller's module
   beforeEach(module('swimmateApp'));
 
-  var TeamsCtrl,
+  var MeetsCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    TeamsCtrl = $controller('TeamsCtrl', {
+    MeetsCtrl = $controller('MeetsCtrl', {
       $scope: scope
     });
   }));
 
-  it('should attach a list of teams to the scope', function () {
-    expect(scope.teams.length).toBe(3);
+  it('should attach a list of meets to the scope', function () {
+    expect(scope.meets.length).toBe(3);
   });
 });

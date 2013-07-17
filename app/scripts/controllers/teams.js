@@ -1,7 +1,6 @@
 'use strict';
 
-swimmateApp.controller('TeamsCtrl', ['$scope', 'fbURL', 'angularFire',
-		function TeamsCtrl($scope, fbURL, angularFire) {
-			$scope.teams = angularFire(fbURL+'teams', $scope, 'teams');
-		}
-	]);
+angular.module('swimmateApp')
+	.controller('TeamsCtrl', function ($scope, fbURL, angularFire) {
+		$scope.teams = angularFire(fbURL+'teams', $scope, 'teams');
+	});
