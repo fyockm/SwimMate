@@ -13,7 +13,7 @@ files = [
   'app/bower_components/angular-fire/angularFire.js',
   'app/scripts/*.js',
   'app/scripts/**/*.js',
-  // 'test/mock/**/*.js',
+  'test/mock/**/*.js',
   'test/spec/**/*.js'
 ];
 

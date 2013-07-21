@@ -1,6 +1,50 @@
+<header id="header">
+	<h1>Teams!</h1>
+</header>
+<section id="main" ng-show="teams.length" ng-cloak>
+	<!-- <input id="toggle-all" type="checkbox" ng-model="allChecked" ng-click="markAll(allChecked)">
+	<label for="toggle-all">Mark all as complete</label> -->
+	<ul id="team-list">
+		<li ng-repeat="team in teams" ng-class="{editing: team == editedTeam}">
+			<div class="view">
+				<!-- <input class="toggle" type="checkbox" ng-model="team.completed"> -->
+				<label ng-dblclick="editTeam(team)">{{team.name}} - {{team.mascot}}</label>
+				<button class="destroy" ng-click="removeTeam(team)"></button>
+			</div>
+			<form ng-submit="doneEditing(team)">
+				<input class="edit" ng-model="team" team-blur="doneEditing(team)" team-focus="team == editedTeam">
+			</form>
+		</li>
+	</ul>
+</section>
+
 <div class="hero-unit">
 	<h1>Teams!</h1>
-	<ul>
-		<li ng-repeat="team in teams">{{team.name}} - {{team.mascot}}</li>
-	</ul>
+
+	<table>
+    <thead>
+	    <tr>
+	      <th>Name</th>
+	      <th>Mascot</th>
+	      <th></th>
+	    </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="team in teams">
+        <td><input ng-model="team.name"></td>
+        <td><input ng-model="team.mascot"></td>
+        <td>
+          <button ng-click="update()">Update</button>
+          <button ng-click="remove()">Remove</button>
+        </td>
+      </tr>
+      <tr>
+        <td><input ng-model="newTeam.name"></td>
+        <td><input ng-model="newTeam.mascot"></td>
+        <td>
+          <button ng-click="add()">Add</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

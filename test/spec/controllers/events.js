@@ -3,7 +3,6 @@
 describe('Controller: EventsCtrl', function () {
 
   // load the controller's module
-  // beforeEach(module('swimmateApp',['firebase']));
   beforeEach(module('swimmateApp'));
 
   var EventsCtrl,
