@@ -14,9 +14,7 @@
 	<!-- build:css({.tmp,app}) styles/main.css -->
 	<link rel="stylesheet" href="styles/bootstrap.css">
 	<link rel="stylesheet" href="styles/main.css">
-	<link rel="stylesheet" href="styles/base.css">
 <!-- endbuild -->
-	<style>[ng-cloak] {display: none}</style>
 </head>
 <body ng-app="swimmateApp">
 	<!--[if lt IE 7]>
@@ -29,21 +27,7 @@
 	<![endif]-->
 
 	<!-- Add your site or application content here -->
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="brand" href="#/">
-					SwimMate
-				</a>
-				<ul class="nav nav-pills" >
-					<li><a href="#/meets">Meets</a></li>
-					<li><a href="#/teams">Teams</a></li>
-					<li><a href="#/events">Events</a></li>
-					<li><a href="#/roster">Roster</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+	<div ng-include="'header.html'"></div>
 	<div class="container" ng-view=""></div>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -88,6 +72,8 @@
 	<script src="scripts/controllers/events.js"></script>
 	<script src="scripts/controllers/meets.js"></script>
 	<script src="scripts/controllers/roster.js"></script>
+	<script src="scripts/directives/focus.js"></script>
+	<script src="scripts/directives/blur.js"></script>
 	<!-- endbuild -->
 </body>
 </html>

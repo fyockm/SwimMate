@@ -1,48 +1,31 @@
-<header id="header">
-	<h1>Teams!</h1>
-</header>
-<section id="main" ng-show="teams.length" ng-cloak>
-	<!-- <input id="toggle-all" type="checkbox" ng-model="allChecked" ng-click="markAll(allChecked)">
-	<label for="toggle-all">Mark all as complete</label> -->
-	<ul id="team-list">
-		<li ng-repeat="team in teams" ng-class="{editing: team == editedTeam}">
-			<div class="view">
-				<!-- <input class="toggle" type="checkbox" ng-model="team.completed"> -->
-				<label ng-dblclick="editTeam(team)">{{team.name}} - {{team.mascot}}</label>
-				<button class="destroy" ng-click="removeTeam(team)"></button>
-			</div>
-			<form ng-submit="doneEditing(team)">
-				<input class="edit" ng-model="team" team-blur="doneEditing(team)" team-focus="team == editedTeam">
-			</form>
-		</li>
-	</ul>
-</section>
-
-<div class="hero-unit">
-	<h1>Teams!</h1>
-
-	<table>
+<div id="header">
+	<h1>Teams</h1>
+</div>
+<div id="list">
+	<table class="table table-hover">
     <thead>
 	    <tr>
-	      <th>Name</th>
-	      <th>Mascot</th>
+	      <th><a href="" ng-click="pred='name'">Name</a></th>
+	      <th><a href="" ng-click="pred='mascot'">Mascot</a></th>
+	      <th><a href="" ng-click="pred='division'">Division</a></th>
 	      <th></th>
 	    </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="team in teams">
-        <td><input ng-model="team.name"></td>
-        <td><input ng-model="team.mascot"></td>
+      <tr ng-repeat="team in items | orderBy:pred">
+        <td>{{team.name}}<!-- <input ng-model="team.name"> --></td>
+        <td>{{team.mascot}}<!-- <input ng-model="team.mascot"> --></td>
+        <td>{{team.division}}<!-- <input ng-model="team.division"> --></td>
         <td>
-          <button ng-click="update()">Update</button>
-          <button ng-click="remove()">Remove</button>
+          <button class="btn" ng-click="remove(team)">X</button>
         </td>
       </tr>
-      <tr>
-        <td><input ng-model="newTeam.name"></td>
-        <td><input ng-model="newTeam.mascot"></td>
+      <tr id="new-item">
+        <td><input ng-model="newItem.name" ></td>
+        <td><input ng-model="newItem.mascot"></td>
+        <td><input ng-model="newItem.division"></td>
         <td>
-          <button ng-click="add()">Add</button>
+          <button class="btn" ng-click="add()">Add</button>
         </td>
       </tr>
     </tbody>

@@ -28,3 +28,18 @@ angular.module('swimmateApp', ['firebase'])
 				redirectTo: '/'
 			});
 	});
+
+function startWatch($scope) {
+	$scope.add = function () {
+		if (!$scope.newItem) {
+			return;
+		}
+		$scope.items.push($scope.newItem);
+		$scope.newItem = null;
+	};
+
+	$scope.remove = function (item) {
+		console.log($scope.items.indexOf(item));
+		$scope.items.splice($scope.items.indexOf(item), 1);
+	};
+}
