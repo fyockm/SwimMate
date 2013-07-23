@@ -13,7 +13,7 @@
     </thead>
     <tbody>
       <tr ng-repeat="meet in meets | orderBy:pred">
-        <td>{{meet.date}}</td>
+        <td>{{meet.date | date:'shortDate'}}</td>
         <td>{{meet.home}}</td>
         <td>{{meet.away}}</td>
         <td>
@@ -21,14 +21,14 @@
         </td>
       </tr>
       <tr id="new-item">
-        <td><input class="input-medium" type="text" ng-model="newMeet.date" ></td>
+        <td><input class="input-medium" type="date" ng-model="newMeet.date" ></td>
         <td>
-          <select class="input-medium" ng-model="newMeet.home">
+          <select class="input-medium" type="text" ng-model="newMeet.home">
             <option ng-repeat="team in teams">{{team.name}}</option>
           </select>
         </td>
         <td>
-          <select class="input-medium" ng-model="newMeet.away">
+          <select class="input-medium" type="text" ng-model="newMeet.away">
             <option ng-repeat="team in teams">{{team.name}}</option>
           </select>
         </td>

@@ -8,7 +8,8 @@
 	      <th><a href="" ng-click="pred='id'">Event #</a></th>
 	      <th><a href="" ng-click="pred='name'">Name</a></th>
 	      <th><a href="" ng-click="pred='age+gender'">Group</a></th>
-	      <th></th>
+	      <th># of Athletes</th>
+        <th></th>
 	    </tr>
     </thead>
     <tbody>
@@ -16,19 +17,29 @@
         <td>{{event.id}}</td>
         <td>{{event.name}}</td>
         <td>{{event.age}}{{event.gender}}</td>
+        <td>{{event.numAthletes}}</td>
         <td>
           <button class="btn btn-danger" ng-click="remove(event)">X</button>
         </td>
       </tr>
       <tr id="new-item">
-        <td><input class="input-mini" type="text" ng-model="newEvent.id" ></td>
+        <td><input class="input-mini" type="number" min="1" ng-model="newEvent.id"></td>
         <td><input class="input-large" type="text" ng-model="newEvent.name"></td>
         <td>
-        	<input class="input-mini" type="text" ng-model="newEvent.age">
-        	<select class="input-mini" ng-model="newEvent.gender">
+          <select class="input-mini" type="number" ng-model="newEvent.age">
+            <option>8</option>
+            <option>10</option>
+            <option>12</option>
+            <option>14</option>
+            <option>17</option>
+          </select>
+        	<select class="input-mini" type="text" ng-model="newEvent.gender">
         		<option>M</option>
         		<option>F</option>
         	</select>
+        </td>
+        <td>
+          <input class="input-mini" type="number" ng-model="newEvent.numAthletes">
         </td>
         <td>
           <button class="btn btn-primary" ng-click="add()">Add</button>

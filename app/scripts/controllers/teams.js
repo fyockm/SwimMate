@@ -10,12 +10,14 @@ angular.module('swimmateApp')
 	});
 
 function editTeams($scope) {
+	$scope.newTeam = {};
+
 	$scope.add = function () {
-		if (!$scope.newTeam) {
+		if (!$scope.newTeam.name) {
 			return;
 		}
 		$scope.teams.push($scope.newTeam);
-		$scope.newTeam = null;
+		$scope.newTeam = {};
 	};
 
 	$scope.remove = function (team) {

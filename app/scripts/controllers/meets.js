@@ -12,16 +12,17 @@ angular.module('swimmateApp')
 	});
 
 function editMeets($scope) {
+	$scope.newMeet = {};
+
 	$scope.add = function () {
-		if (!$scope.newMeet) {
+		if (!$scope.newMeet.date) {
 			return;
 		}
 		$scope.meets.push($scope.newMeet);
-		$scope.newMeet = null;
+		$scope.newMeet = {};
 	};
 
 	$scope.remove = function (meet) {
-		console.log($scope.meets.indexOf(meet));
 		$scope.meets.splice($scope.meets.indexOf(meet), 1);
 	};
 }

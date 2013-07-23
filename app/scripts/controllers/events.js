@@ -10,16 +10,32 @@ angular.module('swimmateApp')
 	});
 
 function editEvents($scope) {
+	$scope.newEvent = defaultFromLast($scope.events);
+
 	$scope.add = function () {
-		if (!$scope.newMeet) {
+		if (!$scope.newEvent.name) {
 			return;
 		}
-		$scope.meets.push($scope.newMeet);
-		$scope.newMeet = null;
+		$scope.events.push($scope.newEvent);
+		$scope.newEvent = defaultFromLast($scope.events);
 	};
 
-	$scope.remove = function (meet) {
-		console.log($scope.meets.indexOf(meet));
-		$scope.meets.splice($scope.meets.indexOf(meet), 1);
+	$scope.remove = function (event) {
+		$scope.events.splice($scope.events.indexOf(event), 1);
+		$scope.newEvent = defaultFromLast($scope.events);
+	};
+
+	function defaultFromLast(events) {
+		if (!events.length) {
+			return {
+				id: 1
+			}
+		}
+		else {
+			return {
+				id: parseInt(events[events.length-1].id) + 1,
+				numAthletes: parseInt(events[events.length-1].numAthletes)
+			}
+		};
 	};
 }
