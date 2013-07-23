@@ -12,20 +12,28 @@
 	    </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="meet in items | orderBy:pred">
+      <tr ng-repeat="meet in meets | orderBy:pred">
         <td>{{meet.date}}</td>
         <td>{{meet.home}}</td>
         <td>{{meet.away}}</td>
         <td>
-          <button class="btn" ng-click="remove(meet)">X</button>
+          <button class="btn btn-danger" ng-click="remove(meet)">X</button>
         </td>
       </tr>
       <tr id="new-item">
-        <td><input ng-model="newItem.date" ></td>
-        <td><input ng-model="newItem.home"></td>
-        <td><input ng-model="newItem.away"></td>
+        <td><input class="input-medium" type="text" ng-model="newMeet.date" ></td>
         <td>
-          <button class="btn" ng-click="add()">Add</button>
+          <select class="input-medium" ng-model="newMeet.home">
+            <option ng-repeat="team in teams">{{team.name}}</option>
+          </select>
+        </td>
+        <td>
+          <select class="input-medium" ng-model="newMeet.away">
+            <option ng-repeat="team in teams">{{team.name}}</option>
+          </select>
+        </td>
+        <td>
+          <button class="btn btn-primary" ng-click="add()">Add</button>
         </td>
       </tr>
     </tbody>

@@ -2,7 +2,7 @@
 	<h1>Events</h1>
 </div>
 <div id="list">
-	<table class="table table-hover sortable">
+	<table class="table table-hover">
     <thead>
 	    <tr>
 	      <th><a href="" ng-click="pred='id'">Event #</a></th>
@@ -12,26 +12,26 @@
 	    </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="event in items | orderBy:pred">
-        <td>{{event.id}}<!-- <input ng-model="team.name"> --></td>
-        <td>{{event.name}}<!-- <input ng-model="team.mascot"> --></td>
-        <td>{{event.age}}{{event.gender}}<!-- <input ng-model="team.division"> --></td>
+      <tr ng-repeat="event in events | orderBy:pred">
+        <td>{{event.id}}</td>
+        <td>{{event.name}}</td>
+        <td>{{event.age}}{{event.gender}}</td>
         <td>
-          <button class="btn" ng-click="remove(event)">X</button>
+          <button class="btn btn-danger" ng-click="remove(event)">X</button>
         </td>
       </tr>
       <tr id="new-item">
-        <td><input ng-model="newItem.id" ></td>
-        <td><input ng-model="newItem.name"></td>
+        <td><input class="input-mini" type="text" ng-model="newEvent.id" ></td>
+        <td><input class="input-large" type="text" ng-model="newEvent.name"></td>
         <td>
-        	<input ng-model="newItem.age">
-        	<select ng-model="newItem.gender">
+        	<input class="input-mini" type="text" ng-model="newEvent.age">
+        	<select class="input-mini" ng-model="newEvent.gender">
         		<option>M</option>
         		<option>F</option>
         	</select>
         </td>
         <td>
-          <button class="btn" ng-click="add()">Add</button>
+          <button class="btn btn-primary" ng-click="add()">Add</button>
         </td>
       </tr>
     </tbody>

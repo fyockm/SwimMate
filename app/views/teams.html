@@ -12,20 +12,25 @@
 	    </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="team in items | orderBy:pred">
+      <tr ng-repeat="team in teams | orderBy:pred">
         <td>{{team.name}}<!-- <input ng-model="team.name"> --></td>
         <td>{{team.mascot}}<!-- <input ng-model="team.mascot"> --></td>
         <td>{{team.division}}<!-- <input ng-model="team.division"> --></td>
         <td>
-          <button class="btn" ng-click="remove(team)">X</button>
+          <button class="btn btn-danger" ng-click="remove(team)">X</button>
         </td>
       </tr>
       <tr id="new-item">
-        <td><input ng-model="newItem.name" ></td>
-        <td><input ng-model="newItem.mascot"></td>
-        <td><input ng-model="newItem.division"></td>
+        <td><input  class="input-medium" type="text" ng-model="newTeam.name" ></td>
+        <td><input  class="input-medium" type="text" ng-model="newTeam.mascot"></td>
         <td>
-          <button class="btn" ng-click="add()">Add</button>
+          <select  class="input-small" type="text" ng-model="newTeam.division">
+            <option>Gold</option>
+            <option>Silver</option>
+          </select>
+        </td>
+        <td>
+          <button class="btn btn-primary" ng-click="add()">Add</button>
         </td>
       </tr>
     </tbody>
