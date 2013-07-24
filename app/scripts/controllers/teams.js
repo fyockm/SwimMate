@@ -3,7 +3,7 @@
 angular.module('swimmateApp')
 	.controller('TeamsCtrl', function ($scope, fbURL, angularFire) {
 		angularFire(fbURL+'teams', $scope, 'teams')
-			.then(function(teams) {
+			.then(function() {
 				editTeams($scope);
 			});
 		$scope.pred = 'name';

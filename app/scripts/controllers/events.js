@@ -29,13 +29,13 @@ function editEvents($scope) {
 		if (!events.length) {
 			return {
 				id: 1
-			}
+			};
 		}
 		else {
 			return {
-				id: parseInt(events[events.length-1].id) + 1,
-				numAthletes: parseInt(events[events.length-1].numAthletes)
-			}
-		};
-	};
+				id: parseInt(events[events.length-1].id,10) + 1,
+				numAthletes: parseInt(events[events.length-1].numAthletes,10)
+			};
+		}
+	}
 }

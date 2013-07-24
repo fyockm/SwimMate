@@ -3,7 +3,7 @@
 angular.module('swimmateApp')
 	.controller('RosterCtrl', function ($scope, fbURL, angularFire) {
 		angularFire(fbURL+'rosters', $scope, 'rosters')
-			.then(function(rosters) {
+			.then(function() {
 				editRosters($scope);
 			});
 		$scope.pred = 'first';
