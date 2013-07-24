@@ -3,7 +3,7 @@
 angular.module('swimmateApp')
 	.controller('EventsCtrl', function ($scope, fbURL, angularFire) {
 		angularFire(fbURL+'events', $scope, 'events')
-			.then(function(events) {
+			.then(function() {
 				editEvents($scope);
 			});
 		$scope.pred = 'id';

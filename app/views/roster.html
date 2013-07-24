@@ -1,6 +1,33 @@
-<div class="hero-unit">
+<div class="page-header">
   <h1>Roster!</h1>
-  <ul>
-    <li ng-repeat="roster in rosters">{{roster.nameFirst}} - {{roster.nameLast}}</li>
-  </ul>
+</div>
+<div id="list">
+	<table class="table table-hover">
+    <thead>
+	    <tr>
+	      <th><a href="" ng-click="pred='first'">First</a></th>
+	      <th><a href="" ng-click="pred='last'">Last</a></th>
+	      <th><a href="" ng-click="pred='age'">Age</a></th>
+	      <th></th>
+	    </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="roster in rosters | orderBy:pred">
+        <td>{{roster.firstName}}</td>
+        <td>{{roster.lastName}}</td>
+        <td>{{roster.age}}</td>
+        <td>
+          <button class="btn btn-danger" ng-click="remove(roster)">X</button>
+        </td>
+      </tr>
+      <tr id="new-item">
+        <td><input class="input-medium" type="text" ng-model="newRoster.firstName"></td>
+        <td><input class="input-medium" type="text" ng-model="newRoster.lastName"></td>
+        <td><input class="input-medium" type="number" ng-model="newRoster.age"></td>
+        <td>
+          <button class="btn btn-primary" ng-click="add()">Add</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
