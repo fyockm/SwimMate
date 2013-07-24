@@ -1,14 +1,19 @@
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-fixed-top navbar-inverse">
 	<div class="navbar-inner">
 		<div class="container">
-			<a class="brand" href="#/">
-				SwimMate
-			</a>
-			<ul class="nav nav-pills" >
-				<li><a href="#/teams">Teams</a></li>
-				<li><a href="#/events">Events</a></li>
-				<li><a href="#/meets">Meets</a></li>
-				<li><a href="#/roster">Roster</a></li>
+			<a class="brand" href="#">SwimMate</a>
+			<ul class="nav nav-pills">
+				<!-- <li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li> -->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#/teams">Teams</a></li>
+						<li><a href="#/events">Events</a></li>
+						<li class="divider"></li>
+						<li><a href="#/meets">Meets</a></li>
+						<li><a href="#/roster">Roster</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</div>
