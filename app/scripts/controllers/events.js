@@ -33,8 +33,7 @@ function editEvents($scope) {
 		}
 		else {
 			return {
-				id: parseInt(events[events.length-1].id,10) + 1,
-				numAthletes: parseInt(events[events.length-1].numAthletes,10)
+				id: parseInt(events[events.length-1].id,10) + 1
 			};
 		}
 	}

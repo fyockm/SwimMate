@@ -13,7 +13,8 @@
     </thead>
     <tbody>
       <tr ng-repeat="meet in meets | orderBy:pred">
-        <td>{{meet.date | date:'shortDate'}}</td>
+        <!-- <td>{{meet.date | date:'shortDate'}}</td> -->
+        <td>{{meet.date}}</td>
         <td>{{meet.home}}</td>
         <td>{{meet.away}}</td>
         <td>
