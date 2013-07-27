@@ -6,7 +6,7 @@ angular.module('swimmateApp')
 			.then(function() {
 				editRosters($scope);
 			});
-		$scope.pred = 'first';
+		$scope.sort = 'first';
 	});
 
 function editRosters($scope) {

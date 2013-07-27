@@ -5,15 +5,15 @@
 	<table class="table table-hover">
     <thead>
 	    <tr>
-	      <th><a href="" ng-click="pred='first'">First</a></th>
-	      <th><a href="" ng-click="pred='last'">Last</a></th>
-        <th><a href="" ng-click="pred='gender'">Gender</a></th>
-	      <th><a href="" ng-click="pred='age'">Age</a></th>
+	      <th><a href="" ng-click="sort='first'">First</a></th>
+	      <th><a href="" ng-click="sort='last'">Last</a></th>
+        <th><a href="" ng-click="sort='gender'">Gender</a></th>
+	      <th><a href="" ng-click="sort='age'">Age</a></th>
 	      <th></th>
 	    </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="roster in rosters | orderBy:pred">
+      <tr ng-repeat="roster in rosters | orderBy:sort">
         <td>{{roster.firstName}}</td>
         <td>{{roster.lastName}}</td>
         <td>{{roster.gender}}</td>

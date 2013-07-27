@@ -5,8 +5,9 @@ angular.module('swimmateApp')
 		angularFire(fbURL+'events', $scope, 'events')
 			.then(function() {
 				editEvents($scope);
+				console.log($scope);
 			});
-		$scope.pred = 'id';
+		$scope.sort = 'id';
 	});
 
 function editEvents($scope) {

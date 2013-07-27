@@ -6,7 +6,7 @@ angular.module('swimmateApp')
 			.then(function() {
 				editTeams($scope);
 			});
-		$scope.pred = 'name';
+		$scope.sort = 'name';
 	});
 
 function editTeams($scope) {

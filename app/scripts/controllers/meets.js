@@ -8,7 +8,7 @@ angular.module('swimmateApp')
 			});
 		angularFire(fbURL+'teams', $scope, 'teams');
 
-		$scope.pred = 'date';
+		$scope.sort = 'date';
 	});
 
 function editMeets($scope) {
