@@ -14,7 +14,7 @@ function editEvents($scope) {
 	$scope.newEvent = defaultFromLast($scope.events);
 
 	$scope.add = function () {
-		if (!$scope.newEvent.name) {
+		if (!$scope.newEvent.stroke) {
 			return;
 		}
 		$scope.events.push($scope.newEvent);

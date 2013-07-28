@@ -26,7 +26,13 @@
       </tr>
       <tr id="new-item">
         <td><input class="input-mini" type="number" min="1" ng-model="newEvent.id"></td>
-        <td><input class="input-small" type="number" min="1" ng-model="newEvent.length"></td>
+        <td>
+          <select class="input-small" type="number" ng-model="newEvent.length">
+            <option>25</option>
+            <option>50</option>
+            <option>100</option>
+          </select>
+        </td>
         <td>
           <select class="input-medium" type="text" ng-model="newEvent.stroke">
             <option>Butterfly</option>
@@ -51,6 +57,7 @@
         	<select class="input-mini" type="text" ng-model="newEvent.gender">
         		<option>M</option>
         		<option>F</option>
+            <option>B</option>
         	</select>
         </td>
         <td>
