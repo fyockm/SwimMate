@@ -17,6 +17,6 @@ describe('Controller: MeetsCtrl', function () {
   }));
 
   it('should attach a list of meets to the scope', function () {
-    // expect(scope.meets.length).toBe(3);
+    expect(scope.meets.length).toBeGreaterThan(0);
   });
 });

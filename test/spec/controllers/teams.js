@@ -17,6 +17,6 @@ describe('Controller: TeamsCtrl', function () {
   }));
 
   it('should attach a list of teams to the scope', function () {
-    // expect(scope.teams.length).toBe(3);
+    expect(scope.teams.length).toBeGreaterThan(0);
   });
 });
