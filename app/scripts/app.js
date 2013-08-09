@@ -21,8 +21,8 @@ angular.module('swimmateApp', ['firebase','ui.bootstrap'])
 				controller: 'MeetsCtrl'
 			})
 			.when('/roster', {
-			  templateUrl: 'views/roster.html',
-			  controller: 'RosterCtrl'
+        templateUrl: 'views/roster.html',
+        controller: 'RosterCtrl'
 			})
 			.otherwise({
 				redirectTo: '/'
