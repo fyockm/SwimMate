@@ -12,11 +12,12 @@ describe('Controller: TeamsCtrl', function () {
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
     TeamsCtrl = $controller('TeamsCtrl', {
-      $scope: scope
+      $scope: scope,
+      fbURL: 'https://swimmate.firebaseio.com/'
     });
   }));
 
   it('should attach a list of teams to the scope', function () {
-    expect(scope.teams.length).toBeGreaterThan(0);
+    expect(scope.teams).toBeDefined();
   });
 });

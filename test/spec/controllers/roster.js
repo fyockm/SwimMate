@@ -17,6 +17,6 @@ describe('Controller: RosterCtrl', function () {
   }));
 
   it('should attach a list of rosters to the scope', function () {
-    expect(scope.rosters.length).toBeGreaterThan(0);
+    expect(scope.rosters).toBeDefined();
   });
 });

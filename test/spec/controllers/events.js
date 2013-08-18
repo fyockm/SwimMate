@@ -17,6 +17,6 @@ describe('Controller: EventsCtrl', function () {
   }));
 
   it('should attach a list of events to the scope', function () {
-    expect(scope.events.length).toBeGreaterThan(0);
+    expect(scope.events).toBeDefined();
   });
 });
