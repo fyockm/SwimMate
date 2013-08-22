@@ -29,14 +29,14 @@ module.exports = function (grunt) {
   grunt.initConfig({
     yeoman: yeomanConfig,
     watch: {
-      coffee: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-        tasks: ['coffee:dist']
-      },
-      coffeeTest: {
-        files: ['test/spec/{,*/}*.coffee'],
-        tasks: ['coffee:test']
-      },
+//      coffee: {
+//        files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
+//        tasks: ['coffee:dist']
+//      },
+//      coffeeTest: {
+//        files: ['test/spec/{,*/}*.coffee'],
+//        tasks: ['coffee:test']
+//      },
       livereload: {
         options: {
           livereload: LIVERELOAD_PORT
@@ -113,26 +113,26 @@ module.exports = function (grunt) {
         '<%= yeoman.app %>/scripts/{,*/}*.js'
       ]
     },
-    coffee: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/scripts',
-          src: '{,*/}*.coffee',
-          dest: '.tmp/scripts',
-          ext: '.js'
-        }]
-      },
-      test: {
-        files: [{
-          expand: true,
-          cwd: 'test/spec',
-          src: '{,*/}*.coffee',
-          dest: '.tmp/spec',
-          ext: '.js'
-        }]
-      }
-    },
+//    coffee: {
+//      dist: {
+//        files: [{
+//          expand: true,
+//          cwd: '<%= yeoman.app %>/scripts',
+//          src: '{,*/}*.coffee',
+//          dest: '.tmp/scripts',
+//          ext: '.js'
+//        }]
+//      },
+//      test: {
+//        files: [{
+//          expand: true,
+//          cwd: 'test/spec',
+//          src: '{,*/}*.coffee',
+//          dest: '.tmp/spec',
+//          ext: '.js'
+//        }]
+//      }
+//    },
     // not used since Uglify task does concat,
     // but still available if needed
     /*concat: {
@@ -244,13 +244,13 @@ module.exports = function (grunt) {
     },
     concurrent: {
       server: [
-        'coffee:dist'
+//        'coffee:dist'
       ],
       test: [
-        'coffee'
+//        'coffee'
       ],
       dist: [
-        'coffee',
+//        'coffee',
         'imagemin',
         'svgmin',
         'htmlmin'
