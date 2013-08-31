@@ -1,8 +1,8 @@
 {
   "name": "swimmate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
-    "angular": "~1.0.7",
+    "angular": "~1.2.0",
     "json3": "~3.2.4",
     "jquery": "~1.9.1",
     "bootstrap-sass": "~2.3.1",
@@ -16,6 +16,6 @@
     "angular-scenario": "~1.0.7"
   },
   "resolutions": {
-    "angular": "~1.0.7"
+    "angular": "~1.2.0"
   }
 }
