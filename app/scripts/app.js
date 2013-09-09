@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('swimmateApp', ['firebase','ui.bootstrap'])
+angular.module('swimmateApp', ['ngRoute','firebase','ui.bootstrap'])
 	.value('fbURL','https://swimmate.firebaseio.com/')
 	.config(function ($routeProvider) {
 		$routeProvider
