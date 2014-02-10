@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('swimmateApp')
-	.controller('MainCtrl', function ($scope) {
+angular.module('swimMateApp')
+	.controller('MainCtrl', function($scope) {
 		$scope.awesomeThings = [
 			'Teams',
 			'Meets',
-			'Rosters'
+			'Events',
 		];
 	});

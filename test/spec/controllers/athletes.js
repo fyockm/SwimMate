@@ -1,22 +1,22 @@
 'use strict';
 
-describe('Controller: EventsCtrl', function () {
+describe('Controller: AthletesCtrl', function () {
 
   // load the controller's module
   beforeEach(module('swimMateApp'));
 
-  var EventsCtrl,
+  var AthletesCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    EventsCtrl = $controller('EventsCtrl', {
+    AthletesCtrl = $controller('AthletesCtrl', {
       $scope: scope
     });
   }));
 
-  it('should attach a list of events to the scope', function () {
-    expect(scope.events).toBeDefined();
+  it('should attach a list of athletes to the scope', function () {
+    expect(scope.athletes).toBeDefined();
   });
 });

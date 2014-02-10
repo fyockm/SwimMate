@@ -1,16 +1,19 @@
 'use strict';
 
-angular.module('swimmateApp', ['ngRoute','firebase','ui.bootstrap'])
-	.value('fbURL','https://swimmate.firebaseio.com/')
-	.config(function ($routeProvider) {
+angular.module('swimMateApp', [
+	'ngCookies',
+	'ngResource',
+	'ngSanitize',
+	'ngRoute',
+	'firebase'
+	// 'ui.bootstrap'
+])
+	.value('fbURL', 'https://swimmate.firebaseio.com/')
+	.config(function($routeProvider) {
 		$routeProvider
 			.when('/', {
 				templateUrl: 'views/main.html',
 				controller: 'MainCtrl'
-			})
-			.when('/teams', {
-				templateUrl: 'views/teams.html',
-				controller: 'TeamsCtrl'
 			})
 			.when('/events', {
 				templateUrl: 'views/events.html',
@@ -20,9 +23,13 @@ angular.module('swimmateApp', ['ngRoute','firebase','ui.bootstrap'])
 				templateUrl: 'views/meets.html',
 				controller: 'MeetsCtrl'
 			})
-			.when('/roster', {
-        templateUrl: 'views/roster.html',
-        controller: 'RosterCtrl'
+			.when('/teams', {
+				templateUrl: 'views/teams.html',
+				controller: 'TeamsCtrl'
+			})
+			.when('/athletes', {
+				templateUrl: 'views/athletes.html',
+				controller: 'AthletesCtrl'
 			})
 			.otherwise({
 				redirectTo: '/'

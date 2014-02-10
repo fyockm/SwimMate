@@ -3,7 +3,7 @@
 describe('Controller: TeamsCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('swimmateApp'));
+  beforeEach(module('swimMateApp'));
 
   var TeamsCtrl,
     scope;
@@ -12,8 +12,7 @@ describe('Controller: TeamsCtrl', function () {
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
     TeamsCtrl = $controller('TeamsCtrl', {
-      $scope: scope,
-      fbURL: 'https://swimmate.firebaseio.com/'
+      $scope: scope
     });
   }));
 

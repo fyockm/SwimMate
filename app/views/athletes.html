@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Roster</h1>
+  <h1>Athlete</h1>
 </div>
 <div id="list">
 	<table class="table table-hover">
@@ -13,25 +13,25 @@
 	    </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="roster in rosters | orderBy:sort">
-        <td>{{roster.firstName}}</td>
-        <td>{{roster.lastName}}</td>
-        <td>{{roster.gender}}</td>
-        <td>{{roster.age}}</td>
+      <tr ng-repeat="athlete in athletes | orderBy:sort">
+        <td>{{athlete.firstName}}</td>
+        <td>{{athlete.lastName}}</td>
+        <td>{{athlete.gender}}</td>
+        <td>{{athlete.age}}</td>
         <td>
-          <button class="btn btn-danger" ng-click="remove(roster)">X</button>
+          <button class="btn btn-danger" ng-click="remove(athlete)">X</button>
         </td>
       </tr>
       <tr id="new-item">
-        <td><input class="input-medium" type="text" ng-model="newRoster.firstName"></td>
-        <td><input class="input-medium" type="text" ng-model="newRoster.lastName"></td>
+        <td><input class="input-medium" type="text" ng-model="newAthlete.firstName"></td>
+        <td><input class="input-medium" type="text" ng-model="newAthlete.lastName"></td>
         <td>
           <select class="input-mini" type="text" ng-model="newEvent.gender">
             <option>M</option>
             <option>F</option>
           </select>
         </td>
-        <td><input class="input-medium" type="number" min="4" max="17" ng-model="newRoster.age"></td>
+        <td><input class="input-medium" type="number" min="4" max="17" ng-model="newAthlete.age"></td>
         <td>
           <button class="btn btn-primary" ng-click="add()">Add</button>
         </td>
