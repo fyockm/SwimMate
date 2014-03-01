@@ -1,27 +1,27 @@
 'use strict';
 
 angular.module('swimMateApp')
-	.controller('TeamsCtrl', function($scope, fbURL, angularFire) {
-		angularFire(fbURL + 'teams', $scope, 'teams')
-			.then(function() {
-				editTeams($scope);
-			});
-  console.log('TeamsCtrl');
-		$scope.sort = 'name';
+  .controller('TeamsCtrl', function ($scope, fbURL, angularFire) {
+    angularFire(fbURL + 'teams', $scope, 'teams')
+      .then(function () {
+        editTeams($scope);
+      });
 
-		function editTeams($scope) {
-			$scope.newTeam = {};
+    $scope.sort = 'name';
 
-			$scope.add = function() {
-				if (!$scope.newTeam.name) {
-					return;
-				}
-				$scope.teams.push($scope.newTeam);
-				$scope.newTeam = {};
-			};
+    function editTeams($scope) {
+      $scope.newTeam = {};
 
-			$scope.remove = function(team) {
-				$scope.teams.splice($scope.teams.indexOf(team), 1);
-			};
-		}
-	});
+      $scope.add = function () {
+        if (!$scope.newTeam.name) {
+          return;
+        }
+        $scope.teams.push($scope.newTeam);
+        $scope.newTeam = {};
+      };
+
+      $scope.remove = function (team) {
+        $scope.teams.splice($scope.teams.indexOf(team), 1);
+      };
+    }
+  });
