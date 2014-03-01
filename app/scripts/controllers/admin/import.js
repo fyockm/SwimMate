@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('swimmateApp')
-  .controller('AdminImportCtrl', function ($scope) {
+  .controller('ImportCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

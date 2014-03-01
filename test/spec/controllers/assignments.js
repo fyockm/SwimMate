@@ -3,7 +3,7 @@
 describe('Controller: AssignmentsCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('swimMateApp'));
+  beforeEach(module('swimmateApp'));
 
   var AssignmentsCtrl,
     scope;

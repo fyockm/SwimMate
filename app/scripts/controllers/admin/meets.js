@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('swimMateApp')
+angular.module('swimmateApp')
   .controller('MeetsCtrl', function ($scope, fbURL, angularFire) {
     angularFire(fbURL + 'meets', $scope, 'meets')
       .then(function () {

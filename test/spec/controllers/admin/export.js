@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: AdminExportCtrl', function () {
+describe('Controller: ExportCtrl', function () {
 
   // load the controller's module
   beforeEach(module('swimmateApp'));
 
-  var AdminExportCtrl,
+  var ExportCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    AdminExportCtrl = $controller('AdminExportCtrl', {
+    ExportCtrl = $controller('ExportCtrl', {
       $scope: scope
     });
   }));

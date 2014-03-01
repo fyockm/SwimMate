@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('swimMateApp', [
+angular.module('swimmateApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -33,11 +33,11 @@ angular.module('swimMateApp', [
       })
       .when('/admin/import', {
         templateUrl: 'views/admin/import.html',
-        controller: 'AdminImportCtrl'
+        controller: 'ImportCtrl'
       })
       .when('/admin/export', {
         templateUrl: 'views/admin/export.html',
-        controller: 'AdminExportCtrl'
+        controller: 'ExportCtrl'
       })
       .when('/assignments', {
         templateUrl: 'views/assignments.html',

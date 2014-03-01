@@ -3,7 +3,7 @@
 describe('Controller: AthletesCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('swimMateApp'));
+  beforeEach(module('swimmateApp'));
 
   var AthletesCtrl,
     scope;

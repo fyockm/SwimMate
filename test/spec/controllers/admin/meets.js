@@ -3,7 +3,7 @@
 describe('Controller: MeetsCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('swimMateApp'));
+  beforeEach(module('swimmateApp'));
 
   var MeetsCtrl,
     scope;
