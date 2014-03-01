@@ -47,6 +47,22 @@ angular.module('swimmateApp', [
         templateUrl: 'views/times.html',
         controller: 'TimesCtrl'
       })
+      .when('/report/cards', {
+        templateUrl: 'views/report/cards.html',
+        controller: 'ReportCardsCtrl'
+      })
+      .when('/report/roster', {
+        templateUrl: 'views/report/roster.html',
+        controller: 'ReportRosterCtrl'
+      })
+      .when('/report/score-sheets', {
+        templateUrl: 'views/report/score-sheets.html',
+        controller: 'ReportScoreSheetsCtrl'
+      })
+      .when('/report/most-improved', {
+        templateUrl: 'views/report/most-improved.html',
+        controller: 'ReportMostImprovedCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
