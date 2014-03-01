@@ -35,6 +35,10 @@ angular.module('swimMateApp', [
         templateUrl: 'views/assignments.html',
         controller: 'AssignmentsCtrl'
       })
+      .when('/times', {
+        templateUrl: 'views/times.html',
+        controller: 'TimesCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
