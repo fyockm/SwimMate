@@ -5,8 +5,8 @@ angular.module('swimMateApp', [
 	'ngResource',
 	'ngSanitize',
 	'ngRoute',
-	'firebase'
-	// 'ui.bootstrap'
+	'firebase',
+	'ui.bootstrap'
 ])
 	.value('fbURL', 'https://swimmate.firebaseio.com/')
 	.config(function($routeProvider) {
@@ -15,20 +15,20 @@ angular.module('swimMateApp', [
 				templateUrl: 'views/main.html',
 				controller: 'MainCtrl'
 			})
-			.when('/events', {
-				templateUrl: 'views/events.html',
+			.when('/admin/events', {
+				templateUrl: 'views/admin/events.html',
 				controller: 'EventsCtrl'
 			})
-			.when('/meets', {
-				templateUrl: 'views/meets.html',
+			.when('/admin/meets', {
+				templateUrl: 'views/admin/meets.html',
 				controller: 'MeetsCtrl'
 			})
-			.when('/teams', {
-				templateUrl: 'views/teams.html',
+			.when('/admin/teams', {
+				templateUrl: 'views/admin/teams.html',
 				controller: 'TeamsCtrl'
 			})
-			.when('/athletes', {
-				templateUrl: 'views/athletes.html',
+			.when('/admin/athletes', {
+				templateUrl: 'views/admin/athletes.html',
 				controller: 'AthletesCtrl'
 			})
 			.otherwise({

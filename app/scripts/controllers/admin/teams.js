@@ -6,7 +6,7 @@ angular.module('swimMateApp')
 			.then(function() {
 				editTeams($scope);
 			});
-
+  console.log('TeamsCtrl');
 		$scope.sort = 'name';
 
 		function editTeams($scope) {

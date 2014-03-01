@@ -1,34 +1,48 @@
 <div class="navbar navbar-fixed-top navbar-inverse">
 	<div class="navbar-inner">
 		<div class="container">
-			<a class="brand" href="#">SwimMate</a>
-			<ul class="nav nav-pills">
-				<!-- <li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li> -->
+			<ul class="navbar-nav nav nav-pills">
+   	<li><a class="brand" href="/">SwimMate</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle">Admin<b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#/teams">Teams</a></li>
-						<li><a href="#/events">Events</a></li>
+						<li><a href="#/admin/teams">Teams</a></li>
+						<li><a href="#/admin/events">Events</a></li>
 						<li class="divider"></li>
-						<li><a href="#/meets">Meets</a></li>
-						<li><a href="#/athletes">Athletes</a></li>
+						<li><a href="#/admin/meets">Meets</a></li>
+						<li><a href="#/admin/athletes">Athletes</a></li>
 						<li class="divider"></li>
-						<li><a href="#/">Import</a></li>
-						<li><a href="#/">Export</a></li>
+						<li><a href="#/admin/import">Import</a></li>
+						<li><a href="#/admin/export">Export</a></li>
 					</ul>
 				</li>
-				<li><a href="#/">Assignments</a></li>
-				<li><a href="#/">Times</a></li>
+				<li><a href="#/assignments">Assignments</a></li>
+				<li><a href="#/times">Times</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle">Reports<b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#/">Cards</a></li>
-						<li><a href="#/">Roster</a></li>
-						<li><a href="#/">Score Sheets</a></li>
-						<li><a href="#/">Most Improved</a></li>
+						<li><a href="#/reports/cards">Cards</a></li>
+						<li><a href="#/reports/roster">Roster</a></li>
+						<li><a href="#/reports/score">Score Sheets</a></li>
+						<li><a href="#/reports/improved">Most Improved</a></li>
 					</ul>
 				</li>
 			</ul>
+	  <ul class="navbar-nav nav pull-right" ng-hide="global.authenticated">
+	    <li><a href="#/signup">Signup</a></li>
+	    <li class="divider-vertical"></li>
+	    <li><a href="#/signin">Signin</a></li>
+	  </ul>
+	  <ul class="navbar-nav nav pull-right" ng-show="global.authenticated">
+	    <li class="dropdown">
+	      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	        {{global.user.name}} <b class="caret"></b>
+	      </a>
+	      <ul class="dropdown-menu">
+	        <li ><a href="#/signout">Signout</a></li>
+	      </ul>
+	    </li>
+	  </ul>
 		</div>
 	</div>
 </div>
