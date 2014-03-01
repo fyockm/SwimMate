@@ -31,6 +31,14 @@ angular.module('swimMateApp', [
         templateUrl: 'views/admin/athletes.html',
         controller: 'AthletesCtrl'
       })
+      .when('/admin/import', {
+        templateUrl: 'views/admin/import.html',
+        controller: 'AdminImportCtrl'
+      })
+      .when('/admin/export', {
+        templateUrl: 'views/admin/export.html',
+        controller: 'AdminExportCtrl'
+      })
       .when('/assignments', {
         templateUrl: 'views/assignments.html',
         controller: 'AssignmentsCtrl'
